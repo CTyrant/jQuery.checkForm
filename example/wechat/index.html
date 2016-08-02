@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>下单</title>
+	<meta name="keywords" content=""/>
+	<meta name="description" content=""/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="x5-page-mode" content="app"/>
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script src="http://cdn.bootcss.com/jquery-mobile/1.4.5/jquery.mobile.js"></script>
+	<script type="text/javascript" src="js/jquery.checkForm.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</head>
+<body style="background:#f6f6f6;padding-bottom:62px;">
+
+<div class="topBar">
+	<ul>
+		<li><span>订货商</span>XXXX</li>
+		<li><span>供货商</span>
+		<select data-role="none">
+			<option>adf</option>
+			<option>fffdf</option>
+		</select></li>
+		<li><span>单号</span><input type="text" name="danhao" placeholder="输入单号"></li>
+	</ul>
+</div>
+
+<div class="itemBox">
+	<div id="nogoods" style="display:none">
+		<img src="img/nogoods.png">
+		<!-- <a href="javascript:openMask()">添加产品</a> -->
+	</div>
+
+	<ul data-name="abc沙县" data-amt="51吨" data-cost="19523" data-address="浙江宁波鄞州区">
+		<li>产品<span>abc沙县</span></li>
+		<li>数量<span>51吨</span></li>
+		<li>单价<span>19523</span></li>
+		<a href="#newItem" class="more"></a>
+	</ul>
+	<ul data-name="abc沙县" data-amt="51吨" data-cost="19523" data-address="浙江宁波鄞州区">
+		<li>产品<span>abc沙县</span></li>
+		<li>数量<span>51吨</span></li>
+		<li>单价<span>19523</span></li>
+		<a href="#newItem" class="more"></a>
+	</ul>
+	<ul data-name="abc沙县" data-amt="51吨" data-cost="19523" data-address="浙江宁波鄞州区">
+		<li>产品<span>abc沙县</span></li>
+		<li>数量<span>51吨</span></li>
+		<li>单价<span>19523</span></li>
+		<a href="#newItem" class="more"></a>
+	</ul>
+</div>
+<div class="btnGroup">
+	<div data="addGoods">添加产品</div>
+	<div data="addPic">添加图片</div>
+</div>
+
+<div class="labelBar">
+	<div class="total">共<span>214124</span>元</div>
+	<a href="javascript:void(0)">提交</a>
+</div>
+
+
+
+<div id="newItem" class="newItem" style="display:none">
+	<div class="label">
+		<a href="javascript:void(0)" style="float: left" data="return">返回</a>
+		<span>操作</span>
+		<a href="javascript:void(0)" style="float:right" data="save">保存</a>
+	</div>
+
+	<form>
+		<ul>
+			<li><label for="gname">品名</label><input data-check-name="品名" data-check-type="int" required type="text" id="gname" placeholder="产品的名字"></li>
+			<li><label for="gamt">数量</label><input type="text" id="gamt" placeholder="这里输入产品的数量"></li>
+			<li><label for="gcost">单价</label><input type="text" id="gcost" placeholder="这里输入产品的单价"></li>
+			<li><label for="address">地址</label><input type="text" name="address" id="address" placeholder="这里输入送货地址"></li>
+		</ul>
+	</form>
+	<a href="javascript:void(0)" class="remove"><i></i>删除</a>
+</div>
+<div id="mask" style="width:100%;height:100%; position: fixed;left:0;top:0;opacity:0.6;background:#000;display:none"></div>
+
+
+
+<style type="text/css">
+	#checkFormMsg{
+		z-index: 99999;
+		position:fixed;left:50%;top:40%;width:70%;background:#fff;margin-left:-35%;
+		border-radius: 5px; clear: both; overflow: hidden;
+	}
+	#checkFormMsg a{
+		display:block;width:100%;line-height:40px;background:#ffa200;color:#fff;
+		text-align: center;font-size: 12px;
+	}
+	#checkFormMsg p{
+		padding: 10px;
+		line-height: 30px;
+		font-size: 14px;
+		text-align: center;
+	}
+
+</style>
+
+<script type="text/javascript">
+	$(function(){
+		var top = $('body').scrollHeight;
+		// $.checkForm.checkMask();
+	})
+</script>
+</body>
+</html>

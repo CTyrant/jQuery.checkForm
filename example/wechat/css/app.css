@@ -1,0 +1,264 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	font-family: "Microsoft Yahei", "Heiti SC";
+}
+
+.topBar{
+	background: #fff;
+	box-shadow: 0 5px 5px #eee;
+	margin-bottom: 10px;
+}
+	.topBar ul{
+		/*padding-bottom: 5px;*/
+	}
+		.topBar ul li{
+			line-height: 30px;
+			padding: 5px 10px;
+			color: #444;
+			border-bottom: 1px solid #ddd;
+			font-size: 0.85em;
+		}
+			.topBar ul li span{
+				display: inline-block;
+				width: 70px;
+				color: #999;
+			}
+			.topBar ul li input{
+				border:none;
+				/*border-bottom: 1px solid #ccc;*/
+				line-height: 25px;
+				padding-left: 5px;
+				width: -webkit-calc(100% - (120px));
+				font-size: 0.85em;
+			}
+
+/* 产品列表 */
+.itemBox{
+	border-top:2px solid #2684d2;
+	background: #fff;
+	clear: both;
+	overflow: hidden;
+	box-shadow: 0 5px 5px #eee;
+}
+	.itemBox ul{
+		display: block;
+		clear: both; overflow: hidden;
+		border-bottom: 1px solid #eee;
+		padding: 5px 0;
+	}
+	.itemBox ul:active{
+		background: #fafafa;
+	}
+		.itemBox ul li{
+			display: block;
+			max-width: 46%;
+			min-height: 35%;
+			width: 190px;
+			float: left;
+			font-size: 0.85em;
+			line-height: 25px;
+			color: #999;
+			padding-left:10px;
+		}
+			.itemBox ul li span{
+				color: #333;
+				margin-left:10px;
+			}
+
+
+
+/* 添加产品、添加图片按钮 */
+.btnGroup{
+	background: #fff;
+	clear: both; overflow: hidden;
+	box-shadow: 0 5px 10px #eee;
+}
+	.btnGroup div{
+		display: block;
+		width: 50%;
+		text-align: center;
+		line-height: 40px;
+		float: left;
+		color: #2684d2;
+	}
+	.btnGroup div:active{
+		background: #2684d2;
+		color: #fff;
+	}
+
+/* 无项目时显示图片 */
+#nogoods{
+	text-align: center;
+}
+	#nogoods img{
+		display: block;
+		margin: 0 auto;
+		margin-top: 50px;
+		width: 200px;
+	}
+	#nogoods a{
+		display: inline-block;
+		/*line-height: 30px;*/
+		padding: 5px 20px;
+		background: #2684d2;
+		color: #fff;
+		margin-bottom: 50px;
+	}
+
+
+
+
+
+
+
+
+
+
+
+/* 添加新产品 */
+.newItem{
+	position: fixed;
+	top: 0;left: 0;
+	width: 100%;
+	height: auto;
+	background: #eee;
+	z-index: 9;
+	padding-bottom: 10px;
+}
+	.newItem .label{
+		line-height: 40px;
+		color: #333;
+		background: #fff;
+		margin-bottom: 10px;
+		text-align: center;
+		border-bottom: 1px solid #ddd;
+		padding: 0 10px;
+	}
+		.newItem .label a{
+			display: inline-block;
+			width: 50px;
+			color: #999;
+		}
+		.newItem .label a:last-child{
+			color: #2684d2;
+		}
+		.newItem .label span{
+			font-weight: 400;
+		}
+
+	.newItem form{
+		background: #fff;
+		border-top: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+	}
+		.newItem form ul{}
+			.newItem form ul li{
+				border-bottom: 1px solid #ddd;
+				padding: 5px;
+				margin: 0 5px;
+				line-height: 30px;
+			}
+			.newItem form ul li:last-child{ border:none;}
+				.newItem form ul li label{
+					color: #999;
+					display: inline-block;
+					width: 60px;
+					font-size: 0.85em;
+				}
+				.newItem form ul li input{
+					border: none;
+					/*border-bottom: 1px solid #ddd;*/
+					line-height: 25px;
+					padding: 0 5px;
+					width: -webkit-calc(100% - (100px));
+					font-size: 0.85em;
+				}
+	.newItem .remove{
+		background: #dc3131;
+		color: #fff;
+		display: none;
+		width: 95%;
+		line-height: 40px;
+		text-align: center;
+		margin: 0 auto;
+		margin-top: 10px;
+	}
+		.newItem .remove i{
+			display: inline-block;
+			width: 11px; height: 14px;
+			background: url(../img/del.png) no-repeat;
+			margin-right: 5px;
+			margin-top: 3px;
+		}
+
+
+
+
+
+
+.labelBar{
+	position: fixed;
+	bottom: 0;left: 0;
+	width: 100%;
+	background: #fff;
+	text-align: center;
+	line-height: 50px;
+	/*border-top: 1px solid #2684d2;*/
+}
+	.labelBar .total{
+		width: 50%;
+		float: left;
+		color: #666;
+		border: 1px solid #2684d2;
+	}
+		.labelBar .total span{
+			color: #ffa01e;
+			padding: 0 10px;
+		}
+	.labelBar a{
+		width: -webkit-calc(50% - (4px));
+		display: block;
+		float: left;
+		background: #2684d2;
+		border: 1px solid #2684d2;
+		color: #fff;
+	}
+
+
+
+
+
+/* 其他通用样式 */
+
+.ui-input-text{display: inline;}
+.ui-loader{display: none;}
+
+.clear{
+	display: none; width: 14px; height: 14px;
+	background: url(../img/clear.png) center no-repeat;
+	background-size: 14px 14px;
+	padding:  8px; float: right;
+}
+
+@media all and (orientation : landscape) { 
+	.more{
+		display: block;
+		position: absolute; right: 0;
+		background: url(../img/arrow.png) center no-repeat;
+		background-size: 100%;
+		width: 30px; height: 24px;
+	}
+}
+
+@media all and (orientation : portrait) { 
+	.more{
+		display: block;
+		position: absolute; right: 0;
+		background: url(../img/arrow.png) center no-repeat;
+		background-size: 100%;
+		width: 30px; height: 50px;
+	}
+}
